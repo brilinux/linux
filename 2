@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Atualiza o sistema
+sudo apt update && sudo apt upgrade -y
+
+# Instala o Apache
+sudo apt install apache2 -y
+
+# Inicia o serviço Apache
+sudo systemctl start apache2
+
+# Habilita o Apache para iniciar na inicialização do sistema
+sudo systemctl enable apache2
+
+# Exibe o status do Apache
+sudo systemctl status apache2
+
+# Mensagem de sucesso
+echo "Servidor web Apache instalado e em execução!"
